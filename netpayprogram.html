@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net Pay Program</title> 
+</head>
+<body>
+
+
+    <style>
+            body{
+                font-family: sans-serif;
+            }
+            p{
+                font-size: 26px;
+                font-weight: bold;
+            }
+            #output{
+                color: red;
+            }
+    </style>
+    <h1>Net Pay Program</h1>
+    <p>Simple Net pay calculator. It takes your gross pay and then deducts Federal, State, FICA. It has the option to deduct
+        any addtional amonut from your check. Then it displays your net pay.</p>
+
+        <!--FED 15%-->
+        <!--STATE 5%-->
+        <!--FICA 7.62%-->
+        <!--IF ANY ADDITIONAL-->
+
+    <ol>
+        <li>START</li>
+        <li>DISPLAY "What is Gross Pay per check"</li>
+        <li>Input GrossPay</li>
+        <li>Set fed = .15</li>
+        <li>SET state =.05</li>
+        <li>SET fica = 0.762</li>
+        <li>SET deductions</li>
+        <li>DISPLAY "Are there any additional deductions"</li>
+        <li>Input ans</li>
+        <li>Process if ans === true/yes</li>
+            <ol>
+                <li>Display "Enter additinal amount:"</li>
+                <li>Input additionalDeduction</li>
+                <li>SET deductions = fed + state + fica + deductions</li>
+                <li>SET netPay = grossPay - deductions</li>
+            </ol>
+        <li>DISPLAY "Your Net pay is "netpay "."</li>
+        <li>END</li>
+    </ol>
+
+    <p>What is your gross Pay?</p>
+    <form action="#" onsubmit="NetPayProgram()">
+        <input type= "text" id="GrossPay">
+        <p>Any additional deductions? If Not leave blank</p>
+        <input type ="text" id="AdditionalDeductions" value="0">
+        <input type= "submit" value="submit">
+    </form>
+    <p>Your Net Pay is <span id="output"></span>.</p>
+
+    <script src="js/netpayprogram.js"></script>
+
+
+
+
+
+</body>
+</html>
+
